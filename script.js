@@ -205,23 +205,14 @@ const answers = document.querySelectorAll(".answer");
 //         })
 //     })
 // })
-let open = true;
 
-for (let i = 0; i < icons.length; i++) {
-    icons[i].addEventListener('click', ()=>{
-        
-
-            answers[i].classList.toggle("open");
-           icons[i].style.transform = "rotate(180deg)";
-           if(!answers[i].classList.contains("open")){
-               icons[i].style.transform = "rotate(0deg)";
-
-           }
-            
-            
-    })
     
-}
+document.querySelectorAll('.question').forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.classList.toggle('open');
+    });
+});
 
 
 // Initialize jersey display on page load

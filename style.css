@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+
 }
 
 #jersey-list {
@@ -43,8 +44,16 @@ body {
     margin-top: 2rem;
     display: flex;
     /* border: 2px solid red; */
-    justify-content: center;
+    justify-content: space-around;
     /* align-items: center; */
+}
+#logo{
+    /* border: 2px solid red; */
+    width: 300px;
+
+}
+#logo img{
+    width:100%;
 }
 .hero div {
     /* border: 2px solid blue; */
@@ -61,7 +70,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    /* border: 2px solid red; */
+    height: 300px;
 }
 button {
     padding: 10px 20px;
@@ -210,61 +220,50 @@ form button:hover {
     background: #555;
 }
 
-.faq-heading{
+.faq-heading {
     text-align: center;
     margin-top: 2rem;
+    font-size: 2rem;
 }
-.answer{
-    /* border: 2px solid red; */
-    max-width: 800px;
-    /* min-width: 400px; */
-    text-align: center;
-    font-size: 20px;
-    color: rgba(0, 0, 0, 0.79);
-}
-.question{
-    margin-top: 2rem;
-    font-size: 25px;
-    width: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.answer{
-    /* border: 2px solid red; */
-    width: 600px;
-    text-align: justify;
-    
-    /* transition: all 10s ease-in-out; */
-}
-.faq-main{
-    /* box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); */
+
+.faq-main {
     max-width: 800px;
     margin: 1rem auto;
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #ffffff72;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-.faq{
-    /* border: 2px solid red; */
 
+.faq {
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
-.question::first-letter{
-    font-weight: bold;
-    font-size: 2rem;
-}
-.icon{
+
+.question {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
 }
-.answer{
-    display:none;
+
+.answer {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.79);
+    text-align: justify;
+    display: none;
 }
 
-.answer.open{
-    display: inline-block;
+.answer.open {
+    display: block;
+}
+
+.icons {
+    cursor: pointer;
 }
 footer {
     display: flex;
@@ -303,6 +302,19 @@ footer {
     .modal-content {
         margin-top: 30%;
     }
+    .faq-main {
+        max-width: 90%;
+        padding: 1rem;
+    }
+    
+    .question {
+        font-size: 1.3rem;
+    }
+
+    .answer {
+        font-size: 1rem;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -324,5 +336,16 @@ footer {
 
     .your-cart {
         padding: 10px;
+    }
+    .faq-heading {
+        font-size: 1.5rem;
+    }
+    
+    .question {
+        font-size: 1.1rem;
+    }
+
+    .answer {
+        font-size: 0.9rem;
     }
 }
