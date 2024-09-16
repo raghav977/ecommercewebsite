@@ -27,7 +27,7 @@ const jerseys = [
     {name:'Manchester united',price:2000,image:'mnuuu.jpg'},
     {name:'Messi',price:2000,image:'messsssiii.jpg'},
     {name:'Portugal Sporting Club',price:2000,image:'da.jpg'},
-    {name:'France',price:2000,image:'fff.jpg'},
+    {name:'France',price:2000,image:'FFF.jpg'},
     {name:'Portugal',price:2000,image:'portugal.jpg'},
 ];
 
