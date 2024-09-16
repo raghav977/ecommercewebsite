@@ -1,14 +1,34 @@
 // Dummy data for jerseys
 const jerseys = [
-    { name: 'Jersey A', price: 29.99, image: 'jersey1.jpg' },
-    { name: 'Jersey B', price: 34.99, image: 'jersey2.jpg' },
-    { name: 'Jersey C', price: 39.99, image: 'jersey4.jpg' },
-    { name: 'Jersey D', price: 44.99, image: 'jersey5.jpg' },
-    { name: 'Jersey E', price: 49.99, image: 'jersey6.jpg' },
-    { name: 'Jersey F', price: 54.99, image: 'jersey7.jpg' },
-    { name: 'Jersey G', price: 59.99, image: 'jersey8.jpg' },
-    { name: 'Jersey H', price: 64.99, image: 'jersey9.jpg' },
-    { name: 'Jersey I', price: 69.99, image: 'jersey10.jpg' },
+        // { name: 'Jersey A', price: 2000, image: 'jersey1.jpg' },
+        // { name: 'Jersey B', price: 2000, image: 'jersey2.jpg' },
+        // { name: 'Jersey C', price: 2000, image: 'jersey4.jpg' },
+        // { name: 'Jersey D', price: 2000, image: 'jersey5.jpg' },
+        // { name: 'Jersey E', price: 2000, image: 'jersey6.jpg' },
+        // { name: 'Jersey F', price: 2000, image: 'jersey7.jpg' },
+    // { name: 'Jersey G', price: 2000, image: 'jersey8.jpg' },
+    // { name: 'Jersey H', price: 2000, image: 'jersey9.jpg' },
+    // { name: 'Jersey I', price: 2000, image: 'jersey10.jpg' },
+    {name:'Nepal',price:2000,image:'Nepal.jpg'},
+    {name:'Barcelona',price:2000,image:'bestbarca.jpg'},
+    {name:'Argentina',price:2000,image:'argentina.jpg'},
+    {name:'Beckam',price:2000,image:'beckam.jpg'},
+    {name:'Henry',price:2000,image:'henry.jpg'},
+    {name:'Messi',price:2000,image:'messi10.jpg'},
+    {name:'Messi',price:2000,image:'messssi.jpg'},
+    {name:'Intermiami',price:1650,image:'intermiami.jpg'},
+    {name:'Arsenal',price:2000,image:'o2.jpg'},
+    {name:'Ronaldo',price:2000,image:'ronaldo.jpg'},
+    {name:'Ronaldo',price:2000,image:'ronaldo17.jpg'},
+    {name:'Real Madrid',price:2000,image:'realmadrid2.jpg'},
+    {name:'Ronaldo',price:2000,image:'ronaldoo.jpg'},
+    {name:'Maldini',price:2000,image:'maldini.jpg'},
+    {name:'Manchester united',price:2000,image:'mnu.jpg'},
+    {name:'Manchester united',price:2000,image:'mnuuu.jpg'},
+    {name:'Messi',price:2000,image:'messsssiii.jpg'},
+    {name:'Portugal Sporting Club',price:2000,image:'da.jpg'},
+    {name:'France',price:2000,image:'fff.jpg'},
+    {name:'Portugal',price:2000,image:'portugal.jpg'},
 ];
 
 let cart = [];
@@ -27,8 +47,10 @@ function displayJerseys() {
         div.className = 'jersey-item';
         div.innerHTML = `
             <img src="${jersey.image}" alt="${jersey.name}">
-            <span>${jersey.name} - $${jersey.price.toFixed(2)}</span>
+            <span><h3>${jersey.name}- Rs ${jersey.price.toFixed(2)}</h3></span>
             <button onclick="addToCart('${jersey.name}', ${jersey.price}, '${jersey.image}')">Add to Cart</button>
+            <br>
+             <a href="https://www.facebook.com/gnuj.kit" style="background-color: #3b5998; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;" target="_blank">Buy Now</a>"
         `;
         jerseyList.appendChild(div);
     });
@@ -174,6 +196,33 @@ function contactUs() {
         );
     });
 }
+const icons = document.querySelectorAll(".icon");
+const answers = document.querySelectorAll(".answer");
+// icons.forEach(icon =>{
+//     icon.addEventListener('click',()=>{
+//         answers.forEach(answer=>{
+//             answer.style.display = 'inline-block';
+//         })
+//     })
+// })
+let open = true;
+
+for (let i = 0; i < icons.length; i++) {
+    icons[i].addEventListener('click', ()=>{
+        
+
+            answers[i].classList.toggle("open");
+           icons[i].style.transform = "rotate(180deg)";
+           if(!answers[i].classList.contains("open")){
+               icons[i].style.transform = "rotate(0deg)";
+
+           }
+            
+            
+    })
+    
+}
+
 
 // Initialize jersey display on page load
 displayJerseys();
